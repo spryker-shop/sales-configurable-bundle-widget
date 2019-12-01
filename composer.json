@@ -12,12 +12,12 @@
     "spryker/sales-configurable-bundle": "^1.0.0"
   },
   "require-dev": {
-    "spryker-shop/configurable-bundle-cart-note-widget": "*",
+    "spryker-shop/configurable-bundle-note-widget": "*",
     "spryker/code-sniffer": "*",
     "spryker/testify": "*"
   },
   "suggest": {
-    "spryker-shop/configurable-bundle-cart-note-widget": "If you want to use configurable bundle cart note feature."
+    "spryker-shop/configurable-bundle-note-widget": "If you want to use configurable bundle note feature."
   },
   "autoload": {
     "psr-4": {
