@@ -19,25 +19,16 @@ use SprykerShop\Yves\SalesConfigurableBundleWidget\Grouper\SalesOrderConfiguredB
  */
 class SalesConfigurableBundleWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\SalesConfigurableBundleWidget\Grouper\SalesOrderConfiguredBundleGrouperInterface
-     */
     public function createSalesOrderConfiguredBundleGrouper(): SalesOrderConfiguredBundleGrouperInterface
     {
         return new SalesOrderConfiguredBundleGrouper();
     }
 
-    /**
-     * @return \SprykerShop\Yves\SalesConfigurableBundleWidget\Checker\ConfiguredBundleCheckerInterface
-     */
     public function createConfiguredBundleChecker(): ConfiguredBundleCheckerInterface
     {
         return new ConfiguredBundleChecker($this->getMessenger());
     }
 
-    /**
-     * @return \SprykerShop\Yves\SalesConfigurableBundleWidget\Dependency\Client\SalesConfigurableBundleWidgetToMessengerClientInterface
-     */
     public function getMessenger(): SalesConfigurableBundleWidgetToMessengerClientInterface
     {
         return $this->getProvidedDependency(SalesConfigurableBundleWidgetDependencyProvider::CLIENT_MESSENGER);

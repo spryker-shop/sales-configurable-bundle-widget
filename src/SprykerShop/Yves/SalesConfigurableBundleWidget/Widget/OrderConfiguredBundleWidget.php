@@ -54,27 +54,16 @@ class OrderConfiguredBundleWidget extends AbstractWidget
         $this->addSalesOrderConfiguredBundlesParameter($salesOrderConfiguredBundles);
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'OrderConfiguredBundleWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@SalesConfigurableBundleWidget/views/order-detail-configured-bundle-widget/order-detail-configured-bundle-widget.twig';
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
-     *
-     * @return void
-     */
     protected function addOrderParameter(OrderTransfer $orderTransfer): void
     {
         $this->addParameter(static::PARAMETER_ORDER, $orderTransfer);

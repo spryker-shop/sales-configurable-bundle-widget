@@ -21,11 +21,6 @@ class SalesConfigurableBundleWidgetDependencyProvider extends AbstractBundleDepe
      */
     public const CLIENT_MESSENGER = 'CLIENT_MESSENGER';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = $this->addMessengerClient($container);
@@ -33,11 +28,6 @@ class SalesConfigurableBundleWidgetDependencyProvider extends AbstractBundleDepe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMessengerClient(Container $container): Container
     {
         $container->set(static::CLIENT_MESSENGER, function (Container $container): SalesConfigurableBundleWidgetToMessengerClientBridge {

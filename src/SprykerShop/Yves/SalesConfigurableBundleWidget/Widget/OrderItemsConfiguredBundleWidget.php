@@ -36,17 +36,11 @@ class OrderItemsConfiguredBundleWidget extends AbstractWidget
         $this->addSalesOrderConfiguredBundlesParameter($indexedItemTransfers);
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'OrderItemsConfiguredBundleWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@SalesConfigurableBundleWidget/views/order-items-configured-bundle-widget/order-items-configured-bundle-widget.twig';

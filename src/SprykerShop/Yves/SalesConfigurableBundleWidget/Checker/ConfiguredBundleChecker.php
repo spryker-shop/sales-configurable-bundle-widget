@@ -21,9 +21,6 @@ class ConfiguredBundleChecker implements ConfiguredBundleCheckerInterface
      */
     protected $messengerClient;
 
-    /**
-     * @param \SprykerShop\Yves\SalesConfigurableBundleWidget\Dependency\Client\SalesConfigurableBundleWidgetToMessengerClientInterface $messengerClient
-     */
     public function __construct(SalesConfigurableBundleWidgetToMessengerClientInterface $messengerClient)
     {
         $this->messengerClient = $messengerClient;
