@@ -1,3 +1,6 @@
+@use 'sass:meta';
+@use 'sass:map';
+
 @mixin sales-configurable-bundle-widget-ordered-configured-bundle($name: '.ordered-configured-bundle') {
     #{$name} {
         padding: 0.5rem;
@@ -5,9 +8,13 @@
         background-color: $setting-color-white;
         border: 1px solid $setting-color-lighter;
 
+        @if meta.mixin-exists(sales-configurable-bundle-widget-ordered-configured-bundle-base-hook) {
+            @include sales-configurable-bundle-widget-ordered-configured-bundle-base-hook;
+        }
+
         &__content {
-            padding: 0 map-get($setting-spacing, 'default') map-get($setting-spacing, 'default');
-            margin: 0 -#{map-get($setting-spacing, 'default')};
+            padding: 0 map.get($setting-spacing, 'default') map.get($setting-spacing, 'default');
+            margin: 0 -#{map.get($setting-spacing, 'default')};
             border-bottom: 1px solid $setting-color-lighter;
         }
 

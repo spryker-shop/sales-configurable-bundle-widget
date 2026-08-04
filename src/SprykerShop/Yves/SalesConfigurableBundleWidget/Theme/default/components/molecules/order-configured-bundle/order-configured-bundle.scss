@@ -1,7 +1,13 @@
+@use 'sass:meta';
+
 @mixin sales-configurable-bundle-widget-order-configured-bundle($name: '.order-configured-bundle') {
     #{$name} {
         border-top: 1px solid $setting-color-light;
         background: none;
+
+        @if meta.mixin-exists(sales-configurable-bundle-widget-order-configured-bundle-base-hook) {
+            @include sales-configurable-bundle-widget-order-configured-bundle-base-hook;
+        }
 
         &__col {
             vertical-align: top;
@@ -18,6 +24,10 @@
     @include sales-configurable-bundle-widget-order-configured-bundle();
 
     #{$name} {
+        @if meta.mixin-exists(configurable-bundle-widget-order-configured-bundle-base-hook) {
+            @include configurable-bundle-widget-order-configured-bundle-base-hook;
+        }
+
         @content;
     }
 }
